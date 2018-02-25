@@ -1,0 +1,331 @@
+{
+  "businesses" : {
+    "Business Test" : {
+      "address" : "5 Earle St Garcha Ballygunge Kolkata WB IN 700025",
+      "lat" : 22.5266332,
+      "lng" : 88.35408600000005,
+      "outstandingBalance" : "2000",
+      "outstanding_balance" : "3000",
+      "time_created" : 1518381672921
+    },
+    "MamarBari" : {
+      "address" : "5 Earle St Garcha Ballygunge Kolkata WB IN 700025",
+      "lat" : 22.5266332,
+      "lng" : 88.35408600000005,
+      "outstandingBalance" : "3000",
+      "outstanding_balance" : "1000",
+      "time_created" : 1516435784674
+    },
+    "Masir Bari" : {
+      "address" : "34 SB Road Jadubabur Bazar Bhowanipore Kolkata WB IN 700025",
+      "lat" : 22.5339748,
+      "lng" : 88.35333689999993,
+      "outstandingBalance" : "4000",
+      "outstanding_balance" : "2000",
+      "time_created" : 1516435823177
+    },
+    "Rubir Bari" : {
+      "address" : "36 SB Road Dover Terrace Kalighat Kolkata WB IN 700029",
+      "lat" : 22.5224358,
+      "lng" : 88.35203000000001,
+      "outstandingBalance" : "5000",
+      "outstanding_balance" : "2000",
+      "time_created" : 1517200154469
+    },
+    "Test" : {
+      "address" : "24, Chowringhee Rd, New Market Area, Dharmatala, Taltala, Kolkata, West Bengal 700016, India",
+      "lat" : 22.5591374,
+      "lng" : 88.35062990000006,
+      "outstandingBalance" : "5000",
+      "placeId" : "ElwyNCwgQ2hvd3JpbmdoZWUgUmQsIE5ldyBNYXJrZXQgQXJlYSwgRGhhcm1hdGFsYSwgVGFsdGFsYSwgS29sa2F0YSwgV2VzdCBCZW5nYWwgNzAwMDE2LCBJbmRpYQ",
+      "timeCreated" : 1518921899771
+    },
+    "Test2" : {
+      "address" : "5, Earle St, Garcha, Ballygunge, Kolkata, West Bengal 700025, India",
+      "lat" : 22.5266332,
+      "lng" : 88.35408600000005,
+      "outstandingBalance" : "222",
+      "placeId" : "EkM1LCBFYXJsZSBTdCwgR2FyY2hhLCBCYWxseWd1bmdlLCBLb2xrYXRhLCBXZXN0IEJlbmdhbCA3MDAwMjUsIEluZGlh",
+      "timeCreated" : 1519020576970
+    }
+  },
+  "checkins" : {
+    "-L4YLgQFq8_WtznxKrK0" : {
+      "businessKey" : "MamarBari",
+      "order" : {
+        "Item 1" : "4"
+      },
+      "status" : "INCOMPLETE",
+      "timeCreated" : 1517790348966,
+      "userKey" : "-L44gd7KdtpFUxBU8C8D"
+    },
+    "-L4gdp7n9qBlwtPsQ8wM" : {
+      "businessKey" : "MamarBari",
+      "payment" : {
+        "amount" : "2"
+      },
+      "status" : "INCOMPLETE",
+      "timeCreated" : 1517946359658,
+      "userKey" : "-L44gd7KdtpFUxBU8C8D"
+    },
+    "-L4nfa51uapr-emO3Odn" : {
+      "businessKey" : "MamarBari",
+      "status" : "INCOMPLETE",
+      "timeCreated" : 1518064263600,
+      "userKey" : "-L44gd7KdtpFUxBU8C8D"
+    },
+    "-L4oTvPrtBjsRNcBruK9" : {
+      "businessKey" : "MamarBari",
+      "status" : "INCOMPLETE",
+      "timeCreated" : 1518077720288,
+      "userKey" : "-L44gd7KdtpFUxBU8C8D"
+    },
+    "-L4tHAmRdAzhFV0fOnk9" : {
+      "businessKey" : "Masir Bari",
+      "order" : {
+        "gross" : 5200,
+        "items" : {
+          "Item 1" : "2",
+          "Item 11" : "5",
+          "Item 2" : 0,
+          "Item 3" : 0
+        },
+        "total" : 5668
+      },
+      "status" : "INCOMPLETE",
+      "timeCreated" : 1518158265551,
+      "userKey" : "-L44gd7KdtpFUxBU8C8D"
+    },
+    "-L4yBJ7obn0TnZum6oGC" : {
+      "businessKey" : "Masir Bari",
+      "order" : {
+        "gross" : 200,
+        "items" : {
+          "Item 1" : "2",
+          "Item 11" : 0,
+          "Item 2" : 0,
+          "Item 3" : 0
+        },
+        "total" : 218.00000000000003
+      },
+      "payment" : {
+        "amount" : 222
+      },
+      "status" : "INCOMPLETE",
+      "timeCreated" : 1518240612174,
+      "userKey" : "-L44gd7KdtpFUxBU8C8D"
+    },
+    "-L4yjBuXYIdJbgrf_W88" : {
+      "businessKey" : "Masir Bari",
+      "order" : {
+        "gross" : 200,
+        "items" : {
+          "Item 1" : "2",
+          "Item 11" : 0,
+          "Item 2" : 0,
+          "Item 3" : 0
+        },
+        "total" : 218.00000000000003
+      },
+      "payment" : {
+        "amount" : 22500
+      },
+      "status" : "COMPLETE",
+      "timeCreated" : 1518249758413,
+      "userKey" : "-L44gd7KdtpFUxBU8C8D"
+    },
+    "-L4zTa08naTy2t-ByFfA" : {
+      "businessKey" : "MamarBari",
+      "order" : {
+        "gross" : 0,
+        "items" : {
+          "Item 1" : 0,
+          "Item 11" : 0,
+          "Item 2" : 0,
+          "Item 3" : 0
+        },
+        "total" : 0
+      },
+      "payment" : {
+        "amount" : 0
+      },
+      "status" : "COMPLETE",
+      "timeCreated" : 1518262164707,
+      "userKey" : "-L44gd7KdtpFUxBU8C8D"
+    },
+    "-L4zZ_rlYL4uMaG01GgV" : {
+      "businessKey" : "Rubir Bari",
+      "order" : {
+        "gross" : 0,
+        "items" : {
+          "Item 1" : 0,
+          "Item 11" : 0,
+          "Item 2" : 0,
+          "Item 3" : 0
+        },
+        "total" : 0
+      },
+      "payment" : {
+        "amount" : 1000
+      },
+      "status" : "COMPLETE",
+      "timeCreated" : 1518263754271,
+      "userKey" : "-L44gd7KdtpFUxBU8C8D"
+    },
+    "-L52pY2mZJr3ZfkvamFQ" : {
+      "businessKey" : "MamarBari",
+      "order" : {
+        "gross" : 7800,
+        "items" : {
+          "Item 1" : "78",
+          "Item 11" : 0,
+          "Item 2" : 0,
+          "Item 3" : 0
+        },
+        "total" : 78000
+      },
+      "status" : "INCOMPLETE",
+      "timeCreated" : 1518335264418,
+      "userKey" : "-L44gd7KdtpFUxBU8C8D"
+    },
+    "-L52sQ0zG9MdZa5z4sLd" : {
+      "businessKey" : "MamarBari",
+      "order" : {
+        "gross" : 112330,
+        "items" : {
+          "Item 1" : "10",
+          "Item 11" : "110",
+          "Item 2" : "11",
+          "Item 3" : "1"
+        },
+        "total" : 1123300
+      },
+      "payment" : {
+        "amount" : 3000
+      },
+      "status" : "COMPLETE",
+      "timeCreated" : 1518336061610,
+      "userKey" : "-L44gd7KdtpFUxBU8C8D"
+    },
+    "-L57F9Xkovs7q9hlTJ1y" : {
+      "businessKey" : "Business Test",
+      "order" : {
+        "gross" : 7000,
+        "items" : {
+          "Item 1" : "10",
+          "Item 11" : "6",
+          "Item 2" : 0,
+          "Item 3" : 0
+        },
+        "total" : 70000
+      },
+      "payment" : {
+        "amount" : 100
+      },
+      "status" : "COMPLETE",
+      "timeCreated" : 1518409383300,
+      "userKey" : "-L44gd7KdtpFUxBU8C8D"
+    }
+  },
+  "itemmaster" : {
+    "Item 1" : {
+      "price" : 100,
+      "quantity" : 11,
+      "time_created" : 1517200241196
+    },
+    "Item 11" : {
+      "price" : 1000,
+      "quantity" : 891,
+      "time_created" : 1517637161913
+    },
+    "Item 2" : {
+      "price" : 110,
+      "quantity" : 93,
+      "time_created" : 1517200250037
+    },
+    "Item 3" : {
+      "price" : 120,
+      "quantity" : 115,
+      "time_created" : 1517200258528
+    }
+  },
+  "routes" : {
+    "East" : {
+      "assignment" : {
+        "assignee" : "-L44fkSUkkGSBoP9v7Xo",
+        "dayOfWeek" : "WEDNESDAY"
+      },
+      "businesses" : {
+        "MamarBari" : true,
+        "Masir Bari" : true,
+        "Rubir Bari" : true
+      },
+      "time_created" : 1517200170498
+    },
+    "East Kolkata" : {
+      "assignment" : {
+        "assignee" : "-L44fkSUkkGSBoP9v7Xo",
+        "dayOfWeek" : "MONDAY"
+      },
+      "timeCreated" : 1519087343369
+    },
+    "North" : {
+      "assignment" : {
+        "assignee" : "-L44gd7KdtpFUxBU8C8D",
+        "dayOfWeek" : "MONDAY"
+      },
+      "businesses" : {
+        "Business Test" : true,
+        "Test" : true,
+        "Test2" : true
+      },
+      "time_created" : 1517200166989
+    },
+    "North Test" : {
+      "businesses" : {
+        "MamarBari" : true,
+        "Masir Bari" : true,
+        "Rubir Bari" : true
+      },
+      "time_created" : 1518421685030
+    },
+    "South" : {
+      "time_created" : 1517200163288
+    },
+    "Susan_Monday" : {
+      "assignment" : {
+        "assignee" : "-L44fkSUkkGSBoP9v7Xo",
+        "dayOfWeek" : "MONDAY"
+      },
+      "businesses" : {
+        "Masir Bari" : true,
+        "Rubir Bari" : true,
+        "Test" : true,
+        "Test2" : true
+      },
+      "timeCreated" : 1519108626835
+    },
+    "Test Route" : {
+      "timeCreated" : 1519094468511
+    },
+    "West Kolkata" : {
+      "time_created" : 1517200174272
+    }
+  },
+  "users" : {
+    "-L44fkSUkkGSBoP9v7Xo" : {
+      "email" : "tinku@yahoo.com",
+      "firstname" : "Tinku",
+      "lastname" : "Saha",
+      "role" : "user",
+      "time_created" : 1517292554295
+    },
+    "-L44gd7KdtpFUxBU8C8D" : {
+      "email" : "lykke_csvalzd_basak@tfbnw.net",
+      "firstname" : "Panku",
+      "lastname" : "Sharma",
+      "role" : "user",
+      "time_created" : 1517292786419
+    }
+  }
+}

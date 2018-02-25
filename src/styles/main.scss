@@ -1,0 +1,40 @@
+$primary: #673AB7;
+$primaryDark: #512DA8;
+$primaryLight: #D1C4E9;
+$accentColor: #CDDC39;
+$primaryText: #212121;
+$secondaryText: #757575;
+$iconColor: #FFFFFF;
+
+.bgPrimary {
+  background-color: $primary;
+}
+.bgPrimaryDark {
+  background-color: $primaryDark;
+}
+.bgPrimaryLight {
+  background-color: $primaryLight;
+}
+.accent {
+  background-color: $accentColor;
+}
+.textPrimary {
+  color: $primaryText;
+}
+
+.textPrimaryDark {
+  color: $primary;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: $primaryText;
+}
+
+i {
+  color: $primaryDark;
+}
+
+button {
+  background-color: $primaryDark;
+  color: #fff;
+}
