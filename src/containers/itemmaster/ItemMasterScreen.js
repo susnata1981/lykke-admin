@@ -52,17 +52,19 @@ export default class ItemMasterScreen extends Component {
           <table className='table table-bordered'>
             <thead>
               <tr className='bgPrimaryLight'>
-                <th className='w-25'>Name</th>
-                <th className='w-25'>Price</th>
-                <th className='w-25'>Quantiy</th>
-                <th className='w-25'>Action</th>
+                <th className='w-15'>Name</th>
+                <th className='w-15'>Base Price</th>
+                <th className='w-15'>Tax</th>
+                <th className='w-15'>Final Price</th>
+                <th className='w-10'>Quantiy</th>
+                <th className='w-30'>Action</th>
               </tr>
             </thead>
             <tbody>
               {items.map(item => {
-                return (<ItemMasterEntry 
-                  item={item} 
-                  removeItem={this.props._removeItem} 
+                return (<ItemMasterEntry
+                  item={item}
+                  removeItem={this.props._removeItem}
                   updateItem={this.props._updateItem} />)
               })}
             </tbody>

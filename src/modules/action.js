@@ -6,8 +6,6 @@ import { validateEmail, isNumber, isInt, isFloat } from '../common/util';
 let actionId = 0;
 const NOTIFICAION_DURATION = 3000;
 
-export const ADMIN_EMAIL = 'susnata@gmail.com';
-
 export const loginSuccess = (user) => {
   return {
     type: Types.LOGIN_SUCCESS,
@@ -185,7 +183,6 @@ export const removeBusiness = (businessName) => {
 
 export const login = () => {
   return dispatch => {
-    console.log('login called');
     const provider = new firebase.auth.GoogleAuthProvider();
     provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
     provider.setCustomParameters({
@@ -194,7 +191,6 @@ export const login = () => {
 
     firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
       .then(function () {
-        console.log('persistence set to LOCAL');
         firebase.auth().signInWithPopup(provider).then(function (result) {
           // This gives you a Google Access Token. You can use it to access the Google API.
           const token = result.credential.accessToken;

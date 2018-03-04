@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import MaterialIcon from 'react-google-material-icons'
 import { confirmAlert } from 'react-confirm-alert';
 import { fprice, isInt, isFloat, isNumber } from '../../common/util';
+import {APP_CONFIG} from '../../config';
 
 export default class ItemMasterEntry extends Component {
   static propTypes = {
@@ -60,16 +61,24 @@ export default class ItemMasterEntry extends Component {
 
     return (
       <tr>
-        <td className='w-25'>{item.name}</td>
-        <td className='w-25'>
+        <td className='w-15'>{item.name}</td>
+        <td className='w-15'>
           <p style={hideOnEditClass}> {fprice(item.price)}</p>
           <input style={showOnEditClass} type='text' ref={el => this.priceInput = el} defaultValue={item.price} />
         </td>
-        <td className='w-25'>
+        <td className='w-15'>
+          <p style={hideOnEditClass}> {fprice(item.price * APP_CONFIG.tax)}</p>
+          <input style={showOnEditClass} type='text' ref={el => this.priceInput = el} defaultValue={item.price} />
+        </td>
+        <td className='w-15'>
+          <p style={hideOnEditClass}> {fprice(item.price * (1 + APP_CONFIG.tax))}</p>
+          <input style={showOnEditClass} type='text' ref={el => this.priceInput = el} defaultValue={item.price} />
+        </td>
+        <td className='w-10'>
           <p style={hideOnEditClass}> {item.quantity}</p>
           <input style={showOnEditClass} type='text' ref={el => this.quantityInput = el} defaultValue={item.quantity} />
         </td>
-        <td className='w-25'>
+        <td className='w-30'>
           <button class="btn btn-link" onClick={this.remove} disabled={this.state.isEdit}>
             <MaterialIcon icon="delete" size={24} />
           </button>

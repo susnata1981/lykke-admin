@@ -17,8 +17,8 @@ export default class CheckinEntry extends Component {
       <tr>
         <td className='w-10 text-center'>{user.firstname + ' ' + user.lastname}</td>
         <td className='w-20 text-center'>{checkin.businessKey}</td>
-        <td className='w-10 text-center'>{checkin.order.total}</td>
-        <td className='w-10 text-center'>{checkin.payment.amount}</td>
+        <td className='w-10 text-center'>{checkin.order ? checkin.order.total : 0}</td>
+        <td className='w-10 text-center'>{checkin.payment ? checkin.payment.amount : 0}</td>
         <td className='w-20 text-center'>{moment(checkin.timeCreated).format('DD/MM/YY hh:mm')}</td>
         <td className='w-20 text-center'>{moment(checkin.timeCompleted).format('DD/MM/YY hh:mm A')}</td>
         <td className='w-10 text-center'>{duration}</td>

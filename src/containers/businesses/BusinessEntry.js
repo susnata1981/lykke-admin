@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { isNumber } from '../../common/util';
 import MaterialIcon from 'react-google-material-icons'
 import { confirmAlert } from 'react-confirm-alert';
-import 'react-confirm-alert/src/react-confirm-alert.css' 
+import 'react-confirm-alert/src/react-confirm-alert.css'
 
 export default class BusinessEntry extends Component {
   static propTypes = {
@@ -15,8 +15,6 @@ export default class BusinessEntry extends Component {
   }
 
   removeBusiness = () => {
-    // confirm(`Are you sure you want to to delete ${business.name}?`);
-    // this.props.removeBusiness(this.props.business.name);
     confirmAlert({
       title: 'Are you sure you want to delete?',
       message: 'Please confirm',
@@ -41,10 +39,9 @@ export default class BusinessEntry extends Component {
     this.setState({
       isEditing: false
     });
-
-    const balance = this.outstandingBalanceInput.value;
-    if (!isNumber(balance)) {
-      alert('Must provide a number');
+    const balance = parseInt(this.outstandingBalanceInput.value);
+    if (balance.toString() !== this.outstandingBalanceInput.value || !isNumber(balance)) {
+      alert(`Must provide a valid outstanding balance (${balance})`);
       return;
     }
 

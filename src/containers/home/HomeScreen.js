@@ -22,6 +22,7 @@ export default class HomeScreen extends Component {
     super(props);
     this.state = {
       completedCheckins: [],
+      incompleteCheckins: [],
       libraryLoaded: false,
       timeUnitForRevenueChart: TIMEUNIT.DAY,
       timeUnitForVisitsChart: TIMEUNIT.DAY,
@@ -33,9 +34,16 @@ export default class HomeScreen extends Component {
       .map(key => nextProps.checkins[key])
       .filter(item => item.status === STATUS_COMPLETE)
 
+    const incompleteCheckins = Object.keys(nextProps.checkins)
+      .map(key => nextProps.checkins[key])
+      .filter(item => item.status !== STATUS_COMPLETE)
+
     this.setState({
-      completedCheckins: completedCheckins
+      completedCheckins,
+      incompleteCheckins,
     });
+    console.log('Unfinished checkins');
+    console.log(incompleteCheckins);
   }
 
   componentDidMount() {
@@ -157,7 +165,6 @@ export default class HomeScreen extends Component {
       return;
     }
 
-    console.log('TU =' + this.getTimeUnitString(this.state.timeUnitForVisitsChart));
     var data = new window.google.visualization.DataTable();
     data.addColumn('string', this.getTimeUnitString(timeUnit));
     data.addColumn('number', 'Total Visits');
@@ -231,8 +238,8 @@ export default class HomeScreen extends Component {
           </div>
           <div className='col-md-6'>
             <div className='p-2' style={styles.bgPrimaryDark}>
-              <h3 className='textPrimary text-center'>Total Unifished Visits</h3>
-              <h1 class="display-4 textPrimaryDark text-center">{this.state.completedCheckins.length}</h1>
+              <h3 className='textPrimary text-center'>Total Unfinished Visits</h3>
+              <h1 class="display-4 textPrimaryDark text-center">{this.state.incompleteCheckins.length}</h1>
             </div>
           </div>
         </div>
