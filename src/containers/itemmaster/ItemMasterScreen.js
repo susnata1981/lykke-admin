@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ItemMasterEntry from './ItemMasterEntry';
 import { isNumber } from '../../common/util';
 import Notification from '../notification';
+import {APP_CONFIG} from '../../config'
 
 export default class ItemMasterScreen extends Component {
   static propTypes = {
@@ -20,8 +21,8 @@ export default class ItemMasterScreen extends Component {
     e.preventDefault();
 
     let itemName = this.itemNameInput.value;
-    let price = this.itemPriceInput.value;
-    let quantity = this.itemQuanityInput.value;
+    let price = parseFloat(this.itemPriceInput.value);
+    let quantity = parseInt(this.itemQuanityInput.value);
 
     if (!itemName) {
       alert('Must provide an item name');
@@ -44,6 +45,7 @@ export default class ItemMasterScreen extends Component {
       return this.props.items[key];
     });
 
+    const taxHeader = `Taxc(${APP_CONFIG.tax * 100}%)`;
     return (
       <div className='row'>
         <div className='col-md-9'>
@@ -54,7 +56,7 @@ export default class ItemMasterScreen extends Component {
               <tr className='bgPrimaryLight'>
                 <th className='w-15'>Name</th>
                 <th className='w-15'>Base Price</th>
-                <th className='w-15'>Tax</th>
+                <th className='w-15'>{taxHeader}</th>
                 <th className='w-15'>Final Price</th>
                 <th className='w-10'>Quantiy</th>
                 <th className='w-30'>Action</th>
@@ -63,6 +65,7 @@ export default class ItemMasterScreen extends Component {
             <tbody>
               {items.map(item => {
                 return (<ItemMasterEntry
+                  key={item.name}
                   item={item}
                   removeItem={this.props._removeItem}
                   updateItem={this.props._updateItem} />)

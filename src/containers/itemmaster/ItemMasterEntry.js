@@ -39,7 +39,6 @@ export default class ItemMasterEntry extends Component {
 
     const item = this.props.item;
     let price = Number(this.priceInput.value);
-    console.log(typeof price);
     if (!isNumber(price)) {
       alert('Price must be a valid number');
       return;
@@ -64,19 +63,17 @@ export default class ItemMasterEntry extends Component {
         <td className='w-15'>{item.name}</td>
         <td className='w-15'>
           <p style={hideOnEditClass}> {fprice(item.price)}</p>
-          <input style={showOnEditClass} type='text' ref={el => this.priceInput = el} defaultValue={item.price} />
+          <input size='10' style={showOnEditClass} type='text' ref={el => this.priceInput = el} defaultValue={item.price} />
         </td>
         <td className='w-15'>
-          <p style={hideOnEditClass}> {fprice(item.price * APP_CONFIG.tax)}</p>
-          <input style={showOnEditClass} type='text' ref={el => this.priceInput = el} defaultValue={item.price} />
+          <p> {fprice(item.price * APP_CONFIG.tax)}</p>
         </td>
         <td className='w-15'>
-          <p style={hideOnEditClass}> {fprice(item.price * (1 + APP_CONFIG.tax))}</p>
-          <input style={showOnEditClass} type='text' ref={el => this.priceInput = el} defaultValue={item.price} />
+          <p> {fprice(item.price * (1 + APP_CONFIG.tax))}</p>
         </td>
         <td className='w-10'>
           <p style={hideOnEditClass}> {item.quantity}</p>
-          <input style={showOnEditClass} type='text' ref={el => this.quantityInput = el} defaultValue={item.quantity} />
+          <input size='10' style={showOnEditClass} type='text' ref={el => this.quantityInput = el} defaultValue={item.quantity} />
         </td>
         <td className='w-30'>
           <button class="btn btn-link" onClick={this.remove} disabled={this.state.isEdit}>

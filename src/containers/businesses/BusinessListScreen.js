@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import BusinessEntry from './BusinessEntry';
 import Notification from '../notification';
-import { isNumber } from '../../common/util';
+import { isNumber, isFloat } from '../../common/util';
 import MapContainer from '../mapcontainer';
 import '../../styles/main.scss';
 
@@ -67,6 +67,7 @@ export default class BusinessListScreen extends Component {
       return;
     }
 
+    outstandBalance = parseFloat(parseFloat(outstandBalance).toFixed(2))
     this.props._createBusiness(businessName, outstandBalance, this.state.formattedPlace, this.state.placeId, this.state.lat, this.state.lng);
     this.resetState();
     this.clearFormFields();

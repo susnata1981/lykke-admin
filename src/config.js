@@ -13,5 +13,5 @@ export const ADMIN_EMAILS = [
 ]
 
 export const APP_CONFIG  = {
-  tax: .09,
+  tax: .18,
 }

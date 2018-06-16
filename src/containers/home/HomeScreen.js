@@ -13,7 +13,6 @@ export default class HomeScreen extends Component {
 
   static propTypes = {
     businessList: PropTypes.object.isRequired,
-    item: PropTypes.object.isRequired,
     checkins: PropTypes.object.isRequired,
     _getCheckins: PropTypes.func.isRequired,
     _getBusinessList: PropTypes.func.isRequired,
@@ -210,9 +209,12 @@ export default class HomeScreen extends Component {
       this.drawSaleAndPaymentChart(this.state.timeUnitForRevenueChart);
       this.drawVisitCountChart(this.state.timeUnitForVisitsChart);
     }
-    const totalSales = this.state.completedCheckins.reduce((sum, curr) => { return curr.order ? sum + curr.order.total : sum }, 0);
-    const totalPayments = this.state.completedCheckins.reduce((sum, curr) => sum + curr.payment.amount, 0);
+    console.log('this.state.completedCheckins');
+    console.log(this.state.completedCheckins);
+    const totalSales = this.state.completedCheckins.reduce((sum, curr) => _.get(curr, 'order.total', 0) + sum, 0);
+    const totalPayments = this.state.completedCheckins.reduce((sum, curr) => sum + _.get(curr, 'payment.amount', 0), 0);
 
+    console.log(totalSales);
     return (
       <div>
         <div className='row'>

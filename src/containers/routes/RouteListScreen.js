@@ -122,7 +122,8 @@ export default class RouteListScreen extends Component {
 										users={users}
 										editRoute={this.editRoute}
 										showRoute={this.showRoute}
-										updateRoute={this.props._updateRoute} />)
+										updateRoute={this.props._updateRoute}
+										removeRoute={this.props._removeRoute} />)
 								})}
 							</tbody>
 						</table>
@@ -134,10 +135,10 @@ export default class RouteListScreen extends Component {
 						{this.state.currentRoute &&
 							<RouteEditorScreen
 								routeList={this.props.routeList}
-								currentRouteKey={this.state.currentRoute.name} 
-								businessList={this.props.businessList} 
-								addBusinessToRoute={this.props._addBusinessToRoute} 
-								removeBusinessFromRoute={this.props._removeBusinessFromRoute} 
+								currentRouteKey={this.state.currentRoute.name}
+								businessList={this.props.businessList}
+								addBusinessToRoute={this.props._addBusinessToRoute}
+								removeBusinessFromRoute={this.props._removeBusinessFromRoute}
 								hideRouteEditor = {this.hideRouteEditor}
 								/>}
 					</div>

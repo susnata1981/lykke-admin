@@ -39,13 +39,16 @@ export default class BusinessEntry extends Component {
     this.setState({
       isEditing: false
     });
-    const balance = parseInt(this.outstandingBalanceInput.value);
-    if (balance.toString() !== this.outstandingBalanceInput.value || !isNumber(balance)) {
-      alert(`Must provide a valid outstanding balance (${balance})`);
+
+    let outstandBalance = this.outstandingBalanceInput.value;
+    alert("Changing to " + outstandBalance)
+    if (!isNumber(outstandBalance)) {
+      alert('Must provide a valid outstanding balance ' + outstandBalance);
       return;
     }
 
-    this.props.updateOutstandingBalance(this.props.business.name, balance);
+    outstandBalance = parseFloat(parseFloat(outstandBalance).toFixed(2))
+    this.props.updateOutstandingBalance(this.props.business.name, outstandBalance);
   }
 
   render() {

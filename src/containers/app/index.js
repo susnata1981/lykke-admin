@@ -91,7 +91,8 @@ class App extends Component {
               <ProtectedComponent exact path="/businesses" component={Businesses} />
               <ProtectedComponent exact path="/routes" component={Routes} />
               <ProtectedComponent exact path="/itemmaster" component={ItemMaster} />
-              <ProtectedComponent exact path="/checkins" component={Checkins} />
+              <ProtectedComponent exact path="/checkins/:id" component={Checkins} />
+              <ProtectedComponent path="/checkins" component={Checkins} />
               <ProtectedComponent exact path="/users" component={Users} />
               <Route exact path="/login" component={Login} />
               <ProtectedComponent path="*" component={Home} />

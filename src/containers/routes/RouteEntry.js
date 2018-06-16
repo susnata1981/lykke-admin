@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MaterialIcon from 'react-google-material-icons'
+import { confirmAlert } from 'react-confirm-alert';
 
 export default class RouteEntry extends Component {
   static propTypes = {
     route: PropTypes.object.isRequired,
     days: PropTypes.array.isRequired,
     users: PropTypes.object.isRequired,
+    editRoute: PropTypes.func.isRequired,
+    removeRoute: PropTypes.func.isRequired,
+    updateRoute: PropTypes.func.isRequired,
   }
 
   constructor(props) {
@@ -22,7 +26,13 @@ export default class RouteEntry extends Component {
   }
 
   remove = () => {
-    this.props._remove(this.props.route.key);
+    confirmAlert({
+      title: `Are you sure you want to remove Route (${this.props.route.name})?`,
+      message: 'Please confirm',
+      confirmLabel: 'Confirm',
+      cancelLabel: 'Cancel',
+      onConfirm: () => this.props.removeRoute(this.props.route.name)
+    });
   }
 
   save = () => {
@@ -57,7 +67,7 @@ export default class RouteEntry extends Component {
     console.log(route);
     const { name } = route;
     const businessCount = route.businesses ? Object.keys(route.businesses).length : 0;
-    
+
     console.log('assignee -> ' + this.state.assignee+" ," + this.state.dayOfWeek);
 
     return (
@@ -73,7 +83,7 @@ export default class RouteEntry extends Component {
           </select>
         }</td>
         <td className='w-15 text-center'>
-          <select onChange={this.handleDayChange} ref={this.dayInput} value={this.state.dayOfWeek} className='custom-select'> 
+          <select onChange={this.handleDayChange} ref={this.dayInput} value={this.state.dayOfWeek} className='custom-select'>
             <option key='NONE' value='NONE'>None</option>
             {this.props.days.map(item => (
               <option key={item} value={item}>{item}</option>
